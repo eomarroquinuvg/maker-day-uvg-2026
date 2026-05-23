@@ -839,6 +839,7 @@ letter-spacing:3px;
   background: #00c853;
   animation: caerConfetti 3s linear forwards;
   z-index: 9999;
+  pointer-events: none;
 }
 
 @keyframes caerConfetti {

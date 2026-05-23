@@ -322,6 +322,7 @@ function finalizarJuego() {
 
 function volverAIntentar() {
   clearInterval(temporizador);
+  detenerConfetti();
 
   document.getElementById("final").classList.add("hidden");
   document.getElementById("juego").classList.add("hidden");
@@ -379,18 +380,35 @@ function mostrarRanking(ranking) {
     lista.appendChild(item);
   });
 
-  lanzarConfetti();
+  iniciarConfettiContinuo();
 }
 
 
-function lanzarConfetti() {
-  for (let i = 0; i < 80; i++) {
+let intervaloConfetti = null;
+
+function iniciarConfettiContinuo() {
+  detenerConfetti();
+
+  intervaloConfetti = setInterval(() => {
+    iniciarConfettiContinuo();
+  }, 900);
+}
+
+function detenerConfetti() {
+  if (intervaloConfetti !== null) {
+    clearInterval(intervaloConfetti);
+    intervaloConfetti = null;
+  }
+}
+
+function iniciarConfettiContinuo() {
+  for (let i = 0; i < 25; i++) {
     const confetti = document.createElement("div");
 
     confetti.className = "confetti";
     confetti.style.left = Math.random() * 100 + "vw";
     confetti.style.backgroundColor = obtenerColorConfetti();
-    confetti.style.animationDelay = Math.random() * 1.5 + "s";
+    confetti.style.animationDelay = Math.random() * 0.5 + "s";
 
     document.body.appendChild(confetti);
 
