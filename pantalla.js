@@ -16,15 +16,26 @@ function cargarQR() {
 }
 
 function cargarRanking() {
-  fetch(SCRIPT_URL)
-    .then((respuesta) => respuesta.json())
-    .then((ranking) => {
-      mostrarRanking(ranking);
-      actualizarHora();
-    })
-    .catch((error) => {
-      console.error("Error al cargar ranking:", error);
-    });
+  const nombreCallback = "recibirRanking_" + Date.now();
+
+  window[nombreCallback] = function (ranking) {
+    mostrarRanking(ranking);
+    actualizarHora();
+
+    delete window[nombreCallback];
+    script.remove();
+  };
+
+  const script = document.createElement("script");
+
+  script.src =
+    SCRIPT_URL +
+    "?callback=" +
+    nombreCallback +
+    "&t=" +
+    Date.now();
+
+  document.body.appendChild(script);
 }
 
 function mostrarRanking(ranking) {
