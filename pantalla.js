@@ -1,7 +1,7 @@
 const GAME_URL =
   "https://eomarroquinuvg.github.io/maker-day-uvg-2026/";
 
-const scriptURL =
+const SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbxDoHD1Z_ygX8VdJMimuqcTuFXPnN_WPIm3a_UN9F7MEW0Ts020iV1XC80gx8WGubI_gw/exec";  
 
 function cargarQR() {
