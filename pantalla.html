@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Maker Day UVG | Pantalla Principal</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="pantalla.css">
+</head>
+
+<body>
+
+  <main class="screen-app">
+
+    <section class="main-panel">
+
+      <header class="screen-header">
+        <img src="logo-uvg.png" alt="Logo UVG" class="logo-uvg">
+
+        <div class="title-box">
+          <h1>Maker Day UVG</h1>
+          <p>Ingeniería en Ciencia de la Computación y Tecnologías de la Información</p>
+        </div>
+
+        <img src="maker-day-dragon.png" alt="Dragón Maker Day" class="dragon-header">
+      </header>
+
+      <section class="content-grid">
+
+        <div class="qr-panel">
+          <h2>Escanea para jugar</h2>
+
+          <img id="qr-img" class="qr-img" alt="QR Maker Day UVG">
+
+          <p id="game-url" class="game-url"></p>
+
+          <div class="dragon-message">
+            🐉 Descifra mensajes secretos usando IA, lógica y Cifrado César.
+          </div>
+        </div>
+
+        <div class="ranking-panel">
+          <h2>🏆 Top 5 en vivo</h2>
+
+          <ol id="ranking-list" class="ranking-list">
+            <li>Esperando participantes...</li>
+          </ol>
+
+          <p id="last-update" class="last-update">
+            Actualizando ranking...
+          </p>
+        </div>
+
+      </section>
+
+    </section>
+
+    <footer class="screen-footer">
+      Universidad del Valle de Guatemala · Maker Day · Ciberseguridad e IA
+    </footer>
+
+  </main>
+
+  <script src="pantalla.js"></script>
+
+</body>
+</html>
