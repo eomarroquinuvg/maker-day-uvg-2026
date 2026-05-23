@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Maker Day UVG | Misión IA + Cifrado César
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="game-card">
+
+            <!-- ENCABEZADO -->
+
+            <header class="app-header">
+
+                <img
+                    src="logo-uvg.png"
+                    alt="Logo UVG"
+                    class="logo-uvg">
+
+                <div class="header-text">
+
+                    <h1>
+                        Maker Day UVG
+                    </h1>
+
+                    <p>
+                        Ingeniería en Ciencia de la Computación y Tecnologías de la Información
+                    </p>
+
+                </div>
+
+                <img
+                    src="maker-day-dragon.png"
+                    alt="Dragon Maker Day"
+                    class="dragon-header">
+
+            </header>
+
+            <div id="dragon-message" class="dragon-message">
+            🐉 Hola, soy tu guía. Vamos a descifrar mensajes secretos.
+            </div>
+
+
+            <!-- REGISTRO -->
+
+            <div
+                id="registro"
+                class="screen">
+
+                <div class="hero-icon">
+
+                    🤖🔐
+
+                </div>
+
+                <h2>
+
+                    Misión IA + Cifrado César
+
+                </h2>
+
+                <p class="intro">
+
+                    Ayuda a la IA de UVG a descifrar mensajes secretos usando lógica,
+                    patrones y desplazamientos de letras.
+
+                </p>
+
+
+                <div class="mission-info">
+
+                    <div>
+
+                        <strong>5</strong>
+
+                        <span>
+                            retos aleatorios
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>60s</strong>
+
+                        <span>
+                            por reto
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>100</strong>
+
+                        <span>
+                            puntos posibles
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+
+                        Nombre
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Escribe tu nombre">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+
+                        Correo
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="Escribe tu correo">
+
+                </div>
+
+
+                <button
+                    class="btn-primary"
+                    onclick="iniciarJuego()">
+
+                    🚀 Iniciar misión
+
+                </button>
+
+            </div>
+
+
+            <!-- JUEGO -->
+
+            <div
+                id="juego"
+                class="screen hidden">
+
+                <div class="game-top">
+
+                    <div
+                        class="level-pill"
+                        id="nivel">
+
+                    </div>
+
+                    <div
+                        class="timer-pill"
+                        id="tiempo">
+
+                    </div>
+
+                </div>
+
+
+                <div class="guide-box">
+
+                    <div class="mini-steps">
+
+                        <span>
+                            Recibe mensaje
+                        </span>
+
+                        <span>
+                            Usa desplazamiento
+                        </span>
+
+                        <span>
+                            Descifra
+                        </span>
+
+                    </div>
+
+
+                    <div class="alphabet-box">
+
+                        <span>A</span>
+                        <span>B</span>
+                        <span>C</span>
+                        <span>D</span>
+                        <span>E</span>
+                        <span>F</span>
+                        <span>G</span>
+                        <span>H</span>
+                        <span>I</span>
+                        <span>J</span>
+                        <span>K</span>
+                        <span>L</span>
+                        <span>M</span>
+                        <span>N</span>
+                        <span>Ñ</span>
+                        <span>O</span>
+                        <span>P</span>
+                        <span>Q</span>
+                        <span>R</span>
+                        <span>S</span>
+                        <span>T</span>
+                        <span>U</span>
+                        <span>V</span>
+                        <span>W</span>
+                        <span>X</span>
+                        <span>Y</span>
+                        <span>Z</span>
+
+                    </div>
+
+                    <div id="shift-visual" class="shift-visual"></div>
+
+                </div>
+
+
+                <div class="cipher-section">
+
+                    <p class="section-label">
+
+                        Mensaje cifrado
+
+                    </p>
+
+                    <div
+                        id="mensaje"
+                        class="mensaje">
+
+                    </div>
+
+                </div>
+
+
+                <div class="hint-box">
+
+                    <span>
+
+                        💡 Pista
+
+                    </span>
+
+                    <p
+                        id="pista">
+
+                    </p>
+
+                </div>
+
+
+                <div class="answer-box">
+
+                    <label>
+
+                        Tu respuesta
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="respuesta"
+                        placeholder="Escribe la palabra descifrada">
+
+                    <button
+                        class="btn-primary"
+                        onclick="validarRespuesta()">
+
+                        Enviar respuesta
+
+                    </button>
+
+                </div>
+
+
+                <p
+                    id="resultado"
+                    class="resultado">
+
+                </p>
+
+
+                <div
+                    id="puntaje"
+                    class="score-box">
+
+                    Puntaje:0
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FINAL -->
+
+            <div
+                id="final"
+                class="screen hidden">
+
+                <div class="hero-icon">
+
+                    🎉
+
+                </div>
+
+                <h2>
+
+                    ¡Misión completada!
+
+                </h2>
+
+                <p
+                    id="resumen"
+                    class="final-score">
+
+                </p>
+
+                <p class="intro">
+
+                    Tus resultados fueron enviados correctamente.
+
+                </p>
+
+                <div id="ranking-box" class="ranking-box">
+                    <h3>🏆 Top 5 Maker Day UVG</h3>
+                    <ol id="ranking-list"></ol>
+                </div>
+
+                <button
+                    class="btn-primary"
+                    onclick="volverAIntentar()">
+
+                    🔁 Volver a intentarlo
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <footer class="app-footer">
+
+            Universidad del Valle de Guatemala · Maker Day · Ciberseguridad e IA
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
