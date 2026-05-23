@@ -18,7 +18,7 @@ const bancoRetos = [
   { respuesta: "SEGURIDAD", desplazamiento: 5, pista: "Protección de información" },
 
   { respuesta: "ROBOT", desplazamiento: 3, pista: "Máquina inteligente" },
-  { respuesta: "IA", desplazamiento: 4, pista: "Tecnología que aprende" },
+  { respuesta: "IA", desplazamiento: 4, pista: "Tecnología que aprende de datos" },
   { respuesta: "MODELO", desplazamiento: 2, pista: "La IA usa uno" },
   { respuesta: "PROMPT", desplazamiento: 6, pista: "Instrucción dada a una IA" },
   { respuesta: "ALGORITMO", desplazamiento: 4, pista: "Conjunto de pasos" },
@@ -27,7 +27,7 @@ const bancoRetos = [
   { respuesta: "RED", desplazamiento: 5, pista: "Dispositivos conectados" },
   { respuesta: "LOGIN", desplazamiento: 2, pista: "Entrar a un sistema" },
   { respuesta: "TOKEN", desplazamiento: 4, pista: "Código temporal" },
-  { respuesta: "SERVIDOR", desplazamiento: 3, pista: "Atiende solicitudes" },
+  { respuesta: "SERVIDOR", desplazamiento: 3, pista: "Atiende solicitudes y guarda información" },
 
   { respuesta: "HASH", desplazamiento: 4, pista: "Huella digital" },
   { respuesta: "BACKUP", desplazamiento: 3, pista: "Copia de seguridad" },
@@ -36,15 +36,15 @@ const bancoRetos = [
   { respuesta: "PHISHING", desplazamiento: 4, pista: "Engaño digital" },
 
   { respuesta: "VIRUS", desplazamiento: 3, pista: "Amenaza informática" },
-  { respuesta: "ANTIVIRUS", desplazamiento: 5, pista: "Detecta amenazas" },
+  { respuesta: "ANTIVIRUS", desplazamiento: 5, pista: "Detecta amenazas informáticas" },
   { respuesta: "ENCRIPTAR", desplazamiento: 2, pista: "Proteger información" },
   { respuesta: "CIFRAR", desplazamiento: 4, pista: "Ocultar mensaje" },
   { respuesta: "CESAR", desplazamiento: 6, pista: "Cifrado clásico" },
 
   { respuesta: "PATRON", desplazamiento: 3, pista: "La IA busca esto" },
   { respuesta: "PREDICCION", desplazamiento: 4, pista: "Resultado probable" },
-  { respuesta: "ENTRENAR", desplazamiento: 2, pista: "Proceso IA" },
-  { respuesta: "CHATBOT", desplazamiento: 5, pista: "Habla con personas" },
+  { respuesta: "ENTRENAR", desplazamiento: 2, pista: "Proceso de reconocer patrones en Aprendizaje automático" },
+  { respuesta: "CHATBOT", desplazamiento: 5, pista: "En IA, habla con personas" },
   { respuesta: "SCRATCH", desplazamiento: 4, pista: "Programación por bloques" },
 
   { respuesta: "BLOQUES", desplazamiento: 2, pista: "Se usan en Scratch" },
@@ -61,13 +61,13 @@ const bancoRetos = [
 
   { respuesta: "ALERTA", desplazamiento: 3, pista: "Aviso" },
   { respuesta: "PUERTO", desplazamiento: 4, pista: "Canal de red" },
-  { respuesta: "SCRIPT", desplazamiento: 2, pista: "Automatiza" },
+  { respuesta: "SCRIPT", desplazamiento: 2, pista: "Automatiza usando código" },
   { respuesta: "CONSOLA", desplazamiento: 3, pista: "Escribir comandos" },
   { respuesta: "SISTEMA", desplazamiento: 5, pista: "Conjunto de componentes" },
 
   { respuesta: "MAKER", desplazamiento: 4, pista: "Persona creadora" },
   { respuesta: "CLAVE", desplazamiento: 3, pista: "Protege acceso" },
-  { respuesta: "USUARIO", desplazamiento: 2, pista: "Usa plataforma" },
+  { respuesta: "USUARIO", desplazamiento: 2, pista: "Usa sistema/programa" },
   { respuesta: "ACCESO", desplazamiento: 5, pista: "Permiso" },
   { respuesta: "COMPUTADORA", desplazamiento: 4, pista: "Equipo electrónico" }
 ];
@@ -266,6 +266,7 @@ function iniciarTemporizador() {
 }
 
 function validarRespuesta() {
+
   clearInterval(temporizador);
 
   const respuesta = document
@@ -277,22 +278,62 @@ function validarRespuesta() {
   const reto = retos[nivelActual];
 
   if (respuesta === reto.respuesta) {
-    participante.puntaje += 20;
-    document.getElementById("resultado").textContent = "✅ Correcto";
-    decirDragon("¡Excelente! Descifraste el mensaje.", "success");
+
+    let puntosGanados = 10;
+
+    if (tiempo > 50) {
+      puntosGanados = 100;
+    }
+    else if (tiempo > 40) {
+      puntosGanados = 80;
+    }
+    else if (tiempo > 30) {
+      puntosGanados = 60;
+    }
+    else if (tiempo > 20) {
+      puntosGanados = 40;
+    }
+    else if (tiempo > 10) {
+      puntosGanados = 20;
+    }
+
+    participante.puntaje += puntosGanados;
+
+    document.getElementById(
+      "resultado"
+    ).textContent =
+      `✅ Correcto +${puntosGanados} pts`;
+
+    decirDragon(
+      `¡Excelente! Ganaste ${puntosGanados} puntos.`,
+      "success"
+    );
+
   } else {
-    document.getElementById("resultado").textContent =
+
+    document.getElementById(
+      "resultado"
+    ).textContent =
       `❌ Incorrecto. Respuesta: ${reto.respuesta}`;
 
-    decirDragon("Casi. Observa el desplazamiento y vuelve a intentarlo en el siguiente reto.", "error");
+    decirDragon(
+      "Casi. Observa el desplazamiento y vuelve a intentarlo.",
+      "error"
+    );
+
   }
 
-  document.getElementById("puntaje").textContent =
+  document.getElementById(
+    "puntaje"
+  ).textContent =
     `Puntaje: ${participante.puntaje}`;
 
   setTimeout(() => {
+
     avanzarReto();
-  }, 1200);
+
+  },1200);
+
 }
 
 function avanzarReto() {
