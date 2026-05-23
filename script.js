@@ -343,7 +343,7 @@ function volverAIntentar() {
 
 function enviarAGoogleForms() {
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxDoHD1Z_ygX8VdJMimuqcTuFXPnN_WPIm3a_UN9F7MEW0Ts020iV1XC80gx8WGubI_gw/exec";
+    "https://script.google.com/macros/s/AKfycbwcViliK4Ch0ssQJQFxJm5eXsqyDqxpXhPgHyQuagECIqV8LpDAMXgNy7vL9357uE3Vww/exec";
 
   const datos = {
     nombre: participante.nombre,
