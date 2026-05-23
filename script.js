@@ -69,7 +69,133 @@ const bancoRetos = [
   { respuesta: "CLAVE", desplazamiento: 3, pista: "Protege acceso" },
   { respuesta: "USUARIO", desplazamiento: 2, pista: "Usa sistema/programa" },
   { respuesta: "ACCESO", desplazamiento: 5, pista: "Permiso" },
-  { respuesta: "COMPUTADORA", desplazamiento: 4, pista: "Equipo electrónico" }
+  { respuesta: "COMPUTADORA", desplazamiento: 4, pista: "Equipo electrónico" },
+
+  { respuesta: "INTERNET", desplazamiento: 3, pista: "Red mundial de información" },
+  { respuesta: "PASSWORD", desplazamiento: 5, pista: "Protege una cuenta" },
+  { respuesta: "HACKER", desplazamiento: 2, pista: "Experto en sistemas" },
+  { respuesta: "TECLADO", desplazamiento: 4, pista: "Sirve para escribir" },
+  { respuesta: "MOUSE", desplazamiento: 3, pista: "Controla el cursor" },
+
+  { respuesta: "PANTALLA", desplazamiento: 6, pista: "Muestra información visual" },
+  { respuesta: "MONITOR", desplazamiento: 2, pista: "Dispositivo de salida" },
+  { respuesta: "CAMARA", desplazamiento: 4, pista: "Captura imágenes" },
+  { respuesta: "MICROFONO", desplazamiento: 3, pista: "Captura sonido" },
+  { respuesta: "AUDIO", desplazamiento: 5, pista: "Relacionado con sonido" },
+
+  { respuesta: "VIDEO", desplazamiento: 2, pista: "Imágenes en movimiento" },
+  { respuesta: "ARCHIVO", desplazamiento: 4, pista: "Documento digital" },
+  { respuesta: "CARPETA", desplazamiento: 3, pista: "Organiza archivos" },
+  { respuesta: "DESCARGA", desplazamiento: 5, pista: "Bajar información de internet" },
+  { respuesta: "SUBIR", desplazamiento: 2, pista: "Enviar archivo a internet" },
+
+  { respuesta: "MEMORIA", desplazamiento: 4, pista: "Guarda información temporal" },
+  { respuesta: "DISCO", desplazamiento: 3, pista: "Almacena información" },
+  { respuesta: "USB", desplazamiento: 5, pista: "Conector portátil" },
+  { respuesta: "TABLET", desplazamiento: 2, pista: "Dispositivo táctil portátil" },
+  { respuesta: "CELULAR", desplazamiento: 4, pista: "Teléfono inteligente" },
+
+  { respuesta: "ANDROID", desplazamiento: 3, pista: "Sistema operativo móvil" },
+  { respuesta: "WINDOWS", desplazamiento: 6, pista: "Sistema operativo popular" },
+  { respuesta: "LINUX", desplazamiento: 2, pista: "Sistema operativo libre" },
+  { respuesta: "PYTHON", desplazamiento: 4, pista: "Lenguaje de programación" },
+  { respuesta: "JAVA", desplazamiento: 3, pista: "Lenguaje usado en muchas aplicaciones" },
+
+  { respuesta: "VARIABLE", desplazamiento: 5, pista: "Guarda un valor en programación" },
+  { respuesta: "FUNCION", desplazamiento: 2, pista: "Bloque reutilizable de código" },
+  { respuesta: "BUCLE", desplazamiento: 4, pista: "Repite instrucciones" },
+  { respuesta: "ERROR", desplazamiento: 3, pista: "Problema en código" },
+  { respuesta: "DEBUG", desplazamiento: 5, pista: "Buscar errores en código" },
+
+  { respuesta: "BIT", desplazamiento: 2, pista: "Unidad mínima de información" },
+  { respuesta: "BYTE", desplazamiento: 4, pista: "Grupo de bits" },
+  { respuesta: "PIXEL", desplazamiento: 3, pista: "Punto de una imagen digital" },
+  { respuesta: "DRON", desplazamiento: 5, pista: "Vehículo aéreo no tripulado" },
+  { respuesta: "SENSOR", desplazamiento: 2, pista: "Detecta cambios del entorno" },
+
+  { respuesta: "SATELITE", desplazamiento: 4, pista: "Orbita la Tierra" },
+  { respuesta: "ENERGIA", desplazamiento: 3, pista: "Hace funcionar dispositivos" },
+  { respuesta: "BATERIA", desplazamiento: 6, pista: "Almacena energía" },
+  { respuesta: "CABLE", desplazamiento: 2, pista: "Conecta dispositivos" },
+  { respuesta: "WIFI", desplazamiento: 4, pista: "Conexión inalámbrica" },
+
+  { respuesta: "BLUETOOTH", desplazamiento: 3, pista: "Conexión inalámbrica de corto alcance" },
+  { respuesta: "NAVEGADOR", desplazamiento: 5, pista: "Permite visitar sitios web" },
+  { respuesta: "BUSCADOR", desplazamiento: 2, pista: "Encuentra información en internet" },
+  { respuesta: "GOOGLE", desplazamiento: 4, pista: "Motor de búsqueda famoso" },
+  { respuesta: "YOUTUBE", desplazamiento: 3, pista: "Plataforma de videos" },
+
+  { respuesta: "STREAM", desplazamiento: 5, pista: "Transmisión en línea" },
+  { respuesta: "GAMER", desplazamiento: 2, pista: "Persona que juega videojuegos" },
+  { respuesta: "AVATAR", desplazamiento: 4, pista: "Representación digital de usuario" },
+  { respuesta: "METAVERSO", desplazamiento: 3, pista: "Mundo virtual interactivo" },
+  { respuesta: "INNOVACION", desplazamiento: 6, pista: "Crear algo nuevo y útil" },
+
+  { respuesta: "MACHINELEARNING", desplazamiento: 3, pista: "Campo donde las computadoras aprenden de datos" },
+  { respuesta: "INTELIGENCIA", desplazamiento: 5, pista: "Capacidad de aprender y resolver problemas" },
+  { respuesta: "ARTIFICIAL", desplazamiento: 2, pista: "Hecho por humanos, no natural" },
+  { respuesta: "NEURONAL", desplazamiento: 4, pista: "Tipo de red inspirada en el cerebro" },
+  { respuesta: "REDNEURONAL", desplazamiento: 3, pista: "Modelo inspirado en conexiones cerebrales" },
+
+  { respuesta: "DEEPLEARNING", desplazamiento: 6, pista: "Aprendizaje profundo" },
+  { respuesta: "CLASIFICACION", desplazamiento: 2, pista: "Separar datos por categorías" },
+  { respuesta: "REGRESION", desplazamiento: 4, pista: "Predice valores numéricos" },
+  { respuesta: "ETIQUETA", desplazamiento: 3, pista: "Valor correcto usado para entrenar" },
+  { respuesta: "DATOS", desplazamiento: 5, pista: "Materia prima de la IA" },
+
+  { respuesta: "ENTRENAMIENTO", desplazamiento: 2, pista: "Proceso de aprendizaje de un modelo" },
+  { respuesta: "VALIDACION", desplazamiento: 4, pista: "Comprobar desempeño del modelo" },
+  { respuesta: "PRUEBA", desplazamiento: 3, pista: "Evaluar si el modelo funciona" },
+  { respuesta: "PREDICCION", desplazamiento: 5, pista: "Resultado estimado por un modelo" },
+  { respuesta: "PATRONES", desplazamiento: 2, pista: "Relaciones encontradas en datos" },
+
+  { respuesta: "SUPERVISADO", desplazamiento: 4, pista: "Aprendizaje con respuestas correctas" },
+  { respuesta: "NOSUPERVISADO", desplazamiento: 3, pista: "Aprendizaje sin respuestas correctas" },
+  { respuesta: "CLUSTER", desplazamiento: 5, pista: "Grupo de datos similares" },
+  { respuesta: "KMEANS", desplazamiento: 2, pista: "Algoritmo popular de agrupamiento" },
+  { respuesta: "ARBOL", desplazamiento: 4, pista: "Modelo con decisiones en ramas" },
+
+  { respuesta: "BOSQUE", desplazamiento: 3, pista: "Conjunto de árboles de decisión" },
+  { respuesta: "RANDOMFOREST", desplazamiento: 6, pista: "Modelo formado por muchos árboles" },
+  { respuesta: "VECTOR", desplazamiento: 2, pista: "Representación numérica de información" },
+  { respuesta: "FEATURE", desplazamiento: 4, pista: "Característica usada por un modelo" },
+  { respuesta: "VARIABLE", desplazamiento: 3, pista: "Dato que puede cambiar" },
+
+  { respuesta: "INSTANCIA", desplazamiento: 5, pista: "Ejemplo individual de datos" },
+  { respuesta: "MODELO", desplazamiento: 2, pista: "Sistema entrenado para aprender" },
+  { respuesta: "PARAMETRO", desplazamiento: 4, pista: "Valor interno ajustado en entrenamiento" },
+  { respuesta: "HIPERPARAMETRO", desplazamiento: 3, pista: "Configuración definida antes de entrenar" },
+  { respuesta: "EXACTITUD", desplazamiento: 5, pista: "Qué tan correcto es un modelo" },
+
+  { respuesta: "PRECISION", desplazamiento: 2, pista: "Métrica de aciertos positivos" },
+  { respuesta: "RECALL", desplazamiento: 4, pista: "Capacidad de encontrar positivos reales" },
+  { respuesta: "FUNO", desplazamiento: 3, pista: "Métrica que combina precisión y recall" },
+  { respuesta: "SESGO", desplazamiento: 5, pista: "Error causado por preferencias en datos" },
+  { respuesta: "SOBREAJUSTE", desplazamiento: 2, pista: "Modelo que memoriza demasiado" },
+
+  { respuesta: "GENERALIZAR", desplazamiento: 4, pista: "Funcionar bien con nuevos datos" },
+  { respuesta: "GPT", desplazamiento: 3, pista: "Modelo de lenguaje generativo" },
+  { respuesta: "CHATGPT", desplazamiento: 5, pista: "Asistente conversacional basado en IA" },
+  { respuesta: "TOKEN", desplazamiento: 2, pista: "Fragmento de texto usado por modelos" },
+  { respuesta: "LLM", desplazamiento: 4, pista: "Modelo grande de lenguaje" },
+
+  { respuesta: "TRANSFORMER", desplazamiento: 3, pista: "Arquitectura moderna de IA" },
+  { respuesta: "EMBEDDING", desplazamiento: 5, pista: "Representación numérica de palabras" },
+  { respuesta: "VISION", desplazamiento: 2, pista: "Área de IA que analiza imágenes" },
+  { respuesta: "GENERATIVA", desplazamiento: 4, pista: "IA que crea contenido nuevo" },
+  { respuesta: "PROMPTING", desplazamiento: 3, pista: "Arte de escribir instrucciones para IA" },
+
+  { respuesta: "CHATBOT", desplazamiento: 5, pista: "Sistema que conversa automáticamente" },
+  { respuesta: "AUTOMATIZACION", desplazamiento: 2, pista: "Realizar tareas sin intervención humana" },
+  { respuesta: "RECOMENDADOR", desplazamiento: 4, pista: "Sugiere contenido o productos" },
+  { respuesta: "ANOMALIA", desplazamiento: 3, pista: "Dato fuera de lo normal" },
+  { respuesta: "SIMULACION", desplazamiento: 5, pista: "Imitación de situaciones reales" },
+
+  { respuesta: "OPTIMIZACION", desplazamiento: 2, pista: "Mejorar resultados minimizando errores" },
+  { respuesta: "PROBABILIDAD", desplazamiento: 4, pista: "Posibilidad de que ocurra algo" },
+  { respuesta: "ESTADISTICA", desplazamiento: 3, pista: "Ciencia de analizar datos" },
+  { respuesta: "PYTORCH", desplazamiento: 5, pista: "Framework popular de deep learning" },
+  { respuesta: "TENSORFLOW", desplazamiento: 2, pista: "Biblioteca usada para inteligencia artificial" }
 ];
 
 function cifrarCesar(texto, desplazamiento) {
@@ -99,7 +225,7 @@ function seleccionarRetosAleatorios() {
       mensaje: cifrarCesar(reto.respuesta, reto.desplazamiento)
     }))
     .sort(() => Math.random() - 0.5)
-    .slice(0, 5);
+    .slice(0, 10);
 }
 
 function iniciarJuego() {
