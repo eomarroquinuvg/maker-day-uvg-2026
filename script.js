@@ -389,8 +389,10 @@ let intervaloConfetti = null;
 function iniciarConfettiContinuo() {
   detenerConfetti();
 
+  lanzarConfetti();
+
   intervaloConfetti = setInterval(() => {
-    iniciarConfettiContinuo();
+    lanzarConfetti();
   }, 900);
 }
 
@@ -401,7 +403,7 @@ function detenerConfetti() {
   }
 }
 
-function iniciarConfettiContinuo() {
+function lanzarConfetti() {
   for (let i = 0; i < 25; i++) {
     const confetti = document.createElement("div");
 
@@ -414,7 +416,7 @@ function iniciarConfettiContinuo() {
 
     setTimeout(() => {
       confetti.remove();
-    }, 3500);
+    }, 4000);
   }
 }
 
